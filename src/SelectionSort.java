@@ -11,18 +11,15 @@ public class SelectionSort {
         }
         for(i=0;i<size;i++)
         {
-            int min= i;
+            int min=i;
             for(j=i+1;j<size;j++)
             {
-                if(a[j]<a[min])
-                {
-                   min=j;
-                }
-               temp=a[i];
-                a[i]=a[min];
-               a[ min]=temp;
-
+                if(a[j]<=a[min])
+                    min=j;
             }
+            temp=a[i];
+            a[i]=a[min];
+            a[min]=temp;
         }
         for( i=0;i<size;i++)
         {
